@@ -46,7 +46,6 @@ Developed by:NARRA RAMYA
 RegisterNumber:212223040128 
 
 */
-
 import numpy as np
 import matplotlib.pyplot as plt
 #Preprocessing Input data
@@ -74,7 +73,6 @@ plt.scatter(X,Y)
 plt.plot(X,y_predicted,color='red')
 plt.show()
 ```
-
 ## Output:
 ## slop and y-intercept
 
@@ -84,6 +82,5 @@ plt.show()
 
 ## GRAPH
 ![image](https://github.com/user-attachments/assets/749673af-8881-4a4f-83e2-ac3eafcb6125)
-
 ## Result:
 Thus the univariate Linear Regression was implemented to fit a straight line using least squares using python programming.
