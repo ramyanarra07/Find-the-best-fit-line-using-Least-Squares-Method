@@ -5,8 +5,8 @@ To implement univariate Linear Regression to fit a straight line using least squ
 ## Equipments Required:
 1. Hardware – PCs
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
-
 ## Algorithm
+```
 step 1. start
 step 2. Get the independent variable X and dependent variable Y.
 step 3. Calculate the mean of the X -values and the mean of the Y -values.
@@ -17,7 +17,7 @@ step 5. Compute the y -intercept of the line by using the formula:
 step 6. Use the slope m and the y -intercept to form the equation of the line.
 step 7. Obtain the straight line equation Y=mX+b and plot the scatterplot.
 step 8. stop
-
+```
 ## Program:
 ```
 /*
@@ -29,34 +29,38 @@ RegisterNumber:212223040128
 ```
 import numpy as np
 import matplotlib.pyplot as plt
-
+#Preprocessing Input data
 X = np.array(eval(input()))
 Y = np.array(eval(input()))
-
+#Mean
 X_mean =np.mean(X)
 Y_mean =np.mean(Y)
-num=0 
-denom=0
-
+num=0 #for slope
+denom=0 #for slope
+#to find sum of (xi-x') & (yi-y') & (xi-x')^2
 for i in range(len(X)):
     num+=(X[i] -X_mean)*(Y[i]-Y_mean)
     denom+= (X[i]-X_mean)**2
-    
+#calculate slope   
 m=num/denom
+#calculate intercept
 b=Y_mean-m*X_mean
 print(m,b)
+#Line equation
 y_predicted=m*X+b
 print(y_predicted)
+#to plot graph
 plt.scatter(X,Y)
 plt.plot(X,y_predicted,color='red')
 plt.show()
 ```
-
 ## Output:
-slope and y-intercept
-![image](https://github.com/user-attachments/assets/ae0d7fe4-54a3-486f-a3e2-597497cf3282)
+SLOP AND Y-INTERCEPT
 
+![image](https://github.com/user-attachments/assets/eeb03e20-9ea1-4fee-ad92-2c08812e970e)
 
+Y-PREDICTED
 
+![image](https://github.com/user-attachments/assets/749673af-8881-4a4f-83e2-ac3eafcb6125)
 ## Result:
 Thus the univariate Linear Regression was implemented to fit a straight line using least squares using python programming.
